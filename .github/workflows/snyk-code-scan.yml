@@ -6,8 +6,11 @@ on:
   push:
     branches:
       - 'main'
+      - 'development'
       - 'stable'
       - 'release/v*"'
+      - 'feature/*'
+      - 'issue/*'
     paths-ignore:
       - '.github/workflows/*'
   pull_request:
@@ -19,9 +22,16 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   security:
     name: Snyk Code Scan
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

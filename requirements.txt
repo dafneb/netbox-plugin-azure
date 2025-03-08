@@ -1,2 +1,16 @@
-azure-mgmt-resource==23.3.0
-azure-identity==1.20.0
+# azure-core==1.32.0
+# azure-identity==1.20.0
+# azure-mgmt-core==1.5.0
+# azure-mgmt-alertsmanagement==1.0.0
+# azure-mgmt-monitor==6.0.2
+# azure-mgmt-authorization==4.0.0
+# azure-mgmt-subscription==3.1.1
+# azure-mgmt-billing==7.0.0
+# azure-mgmt-costmanagement==4.0.1
+# azure-mgmt-resource==23.3.0
+# azure-mgmt-compute==34.0.0
+# azure-mgmt-network==28.1.0
+# azure-mgmt-storage==22.1.1
+# azure-mgmt-appconfiguration==4.0.0
+# azure-mgmt-web==8.0.0
+# azure-mgmt-containerservice==34.1.0
