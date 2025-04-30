@@ -17,4 +17,4 @@ class AzureSubscriptionFilterSet(NetBoxModelFilterSet):
         fields = ['subid', 'name', 'status', 'approver', 'owner', 'tenant']
 
     def search(self, queryset, name, value):
-        return queryset.filter(description__icontains=value)
+        return queryset.filter(name__icontains=value)
