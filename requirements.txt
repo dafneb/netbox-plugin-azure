@@ -1,3 +1,11 @@
+Django
+django_db
+django-filter
+django-shortcuts
+django-tables2
+django_urls
+django-views
+djangorestframework
 # azure-core==1.32.0
 # azure-identity==1.20.0
 # azure-mgmt-core==1.5.0

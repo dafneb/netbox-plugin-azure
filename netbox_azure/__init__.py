@@ -6,6 +6,8 @@
 from netbox.plugins import PluginConfig
 
 class NetBoxAzureConfig(PluginConfig):
+    """Plugin configuration for the netbox_azure plugin
+    """
     name = 'netbox_azure'
     verbose_name = 'NetBox Azure Inventory'
     version = '1.0.0'

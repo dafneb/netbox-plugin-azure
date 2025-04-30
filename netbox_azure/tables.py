@@ -6,7 +6,7 @@
 import django_tables2 as tables
 
 from netbox.tables import NetBoxTable, ChoiceFieldColumn
-from .models import AzureTenantModel, AzureSubscriptionModel
+from netbox_azure import models
 
 class AzureTenantTable(NetBoxTable):
     """Table for Azure Tenant Model
@@ -26,9 +26,19 @@ class AzureTenantTable(NetBoxTable):
     class Meta(NetBoxTable.Meta):
         """Meta data for the AzureTenantTable
         """
-        model = AzureTenantModel
-        fields = ('pk', 'id', 'tenid', 'name', 'comment')
-        default_columns = ('tenid', 'name', 'comment')
+        model = models.AzureTenantModel
+        fields = (
+            'pk',
+            'id',
+            'tenid',
+            'name',
+            'comment'
+        )
+        default_columns = (
+            'tenid',
+            'name',
+            'comment'
+        )
 
 class AzureSubscriptionTable(NetBoxTable):
     """Table for Azure Subscription Model
@@ -61,6 +71,23 @@ class AzureSubscriptionTable(NetBoxTable):
     class Meta(NetBoxTable.Meta):
         """Meta data for the AzureSubscriptionTable
         """
-        model = AzureSubscriptionModel
-        fields = ('pk', 'id', 'subid', 'name', 'comment', 'status', 'approver', 'owner', 'tenant')
-        default_columns = ('subid', 'name', 'comment', 'status', 'approver', 'owner')
+        model = models.AzureSubscriptionModel
+        fields = (
+            'pk',
+            'id',
+            'subid',
+            'name',
+            'comment',
+            'status',
+            'approver',
+            'owner',
+            'tenant'
+        )
+        default_columns = (
+            'subid',
+            'name',
+            'approver',
+            'owner',
+            'status',
+            'comment'
+        )

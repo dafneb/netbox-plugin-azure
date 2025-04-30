@@ -15,15 +15,27 @@ description = "Azure integration for NetBox."
 readme = "README.md"
 keywords = ["netbox", "azure", "microsoft", "cloud"]
 
+dependencies = [
+    "Django",
+    "django_db",
+    "django-filter",
+    "django-shortcuts",
+    "django-tables2",
+    "django_urls",
+    "django-views",
+    "djangorestframework",
+]
+
 classifiers=[
     "Development Status :: 2 - Pre-Alpha",
     'Intended Audience :: Developers',
     'Natural Language :: English',
     "Programming Language :: Python :: 3 :: Only",
+    'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: 3.12',
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 
-requires-python = ">=3.11.0"
+requires-python = ">=3.10"

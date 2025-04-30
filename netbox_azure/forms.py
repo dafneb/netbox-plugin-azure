@@ -3,9 +3,10 @@
 """This module contains the forms for the netbox_azure app
 """
 
-from netbox.forms import NetBoxModelForm
+from django import forms
+from netbox.forms import NetBoxModelForm, NetBoxModelFilterSetForm
 from utilities.forms.fields import CommentField, DynamicModelChoiceField
-from .models import AzureTenantModel, AzureSubscriptionModel
+from netbox_azure import models, choices
 
 class AzureTenantForm(NetBoxModelForm):
     """Form for the AzureTenantModel
@@ -15,11 +16,16 @@ class AzureTenantForm(NetBoxModelForm):
     class Meta:
         """Meta data for the AzureTenantForm
         """
-        model = AzureTenantModel
-        fields = ['name', 'tenid', 'comment']
+        model = models.AzureTenantModel
+        fields = [
+            'name',
+            'tenid', 
+            'comment',
+            'tags',
+        ]
         labels = {
-            'tenid': 'Tenant ID',
             'name': 'Tenant Name',
+            'tenid': 'Tenant ID',
             'comment': 'Comment',
         }
 
@@ -28,23 +34,51 @@ class AzureSubscriptionForm(NetBoxModelForm):
     """
     comment = CommentField()
     tenant = DynamicModelChoiceField(
-        queryset=AzureTenantModel.objects.all()
+        queryset=models.AzureTenantModel.objects.all()
     )
 
     class Meta:
         """Meta data for the AzureSubscriptionForm
         """
-        model = AzureSubscriptionModel
-        fields = ['name', 'subid', 'comment', 'status', 'approver', 'owner', 'tenant']
+        model = models.AzureSubscriptionModel
+        fields = [
+            'name',
+            'subid',
+            'comment',
+            'status',
+            'approver',
+            'owner',
+            'tenant',
+            'tags',
+        ]
         labels = {
-            'tenant': 'Azure Tenant',
             'name': 'Subscription Name',
             'subid': 'Subscription ID',
             'comment': 'Comment',
             'status': 'Status',
             'approver': 'Approver',
             'owner': 'Owner',
+            'tenant': 'Azure Tenant',
         }
         help_texts = {
             'tenant': 'The Azure Tenant to which this subscription belongs',
         }
+
+class AzureSubscriptionFilterForm(NetBoxModelFilterSetForm):
+    """Filter form for the AzureSubscriptionModel
+    """
+    model = models.AzureSubscriptionModel
+    tenant = forms.ModelMultipleChoiceField(
+        queryset=models.AzureTenantModel.objects.all(),
+        required=False
+    )
+    status = forms.MultipleChoiceField(
+        choices=choices.SubscriptionStatusChoices,
+        required=False
+    )
+    approver = forms.CharField(
+        required=False
+    )
+    owner = forms.CharField(
+        required=False
+    )
