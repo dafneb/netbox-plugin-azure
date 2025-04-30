@@ -1,0 +1,41 @@
+# See PEP 518 for the spec of this file
+# https://www.python.org/dev/peps/pep-0518/
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name =  "netbox-azure"
+version = "1.0.0"
+authors = [
+    {name = "David Burel", email = "david.burel@burelovi.eu"},
+]
+description = "Azure integration for NetBox."
+readme = "README.md"
+keywords = ["netbox", "azure", "microsoft", "cloud"]
+
+dependencies = [
+    "Django",
+    "django_db",
+    "django-filter",
+    "django-shortcuts",
+    "django-tables2",
+    "django_urls",
+    "django-views",
+    "djangorestframework",
+]
+
+classifiers=[
+    "Development Status :: 2 - Pre-Alpha",
+    'Intended Audience :: Developers',
+    'Natural Language :: English',
+    "Programming Language :: Python :: 3 :: Only",
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+requires-python = ">=3.10"
