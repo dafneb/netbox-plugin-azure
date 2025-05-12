@@ -1,0 +1,27 @@
+name: Scorecard supply-chain security
+
+on:
+  # For Branch-Protection check. Only the default branch is supported. See
+  # https://github.com/ossf/scorecard/blob/main/docs/checks.md#branch-protection
+  branch_protection_rule:
+  # To guarantee Maintained check is occasionally updated. See
+  # https://github.com/ossf/scorecard/blob/main/docs/checks.md#maintained
+  schedule:
+    - cron: '35 23 * * 5'
+  push:
+    branches:
+      - 'main'
+
+# Declare default permissions as read only.
+permissions:
+  contents: read
+
+jobs:
+  scorecard:
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+      id-token: write
+    uses: dafneb/.github/.github/workflows/scorecard.yml@1b5a195ebaeaca64d7c733f8b72b425df85fc71a
+    secrets: inherit
