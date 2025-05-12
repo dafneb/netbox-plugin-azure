@@ -172,10 +172,18 @@ cython_debug/
 
 # Visual Studio Code
 .vscode/
+
+# Local History for Visual Studio Code
+.history/
+
+# Visual Studio Code - Server - Remote Development
 .remote/
 
-# My notes ... 
+# My notes 
 notes.txt
+
+# Snyk Security
+.dcignore
 
 # REST Client
 *.http
