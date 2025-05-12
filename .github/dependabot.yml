@@ -1,0 +1,17 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+
+version: 2
+updates:
+# Enable version updates for GitHub actions
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "daily"
+    time: "16:00"
+  groups:
+    all-actions:
+      patterns: [ "*" ]
+  labels:
+    - "dependencies"
+    - "github-actions"
