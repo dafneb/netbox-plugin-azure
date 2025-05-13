@@ -7,6 +7,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/dafneb/netbox-plugin-azure)
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/dafneb/netbox-plugin-azure/snyk-code-scan.yml?label=snyk-security)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/dafneb/netbox-plugin-azure/codeql.yml?label=CodeQL)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/dafneb/netbox-plugin-azure/badge)](https://scorecard.dev/viewer/?uri=github.com/dafneb/netbox-plugin-azure)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10545/badge)](https://www.bestpractices.dev/projects/10545)
 
