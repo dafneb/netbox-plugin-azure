@@ -11,7 +11,9 @@ on:
   push:
     branches:
       - 'main'
-
+    paths-ignore:
+      - '.github/workflows/*'
+      
 # Declare default permissions as read only.
 permissions:
   contents: read
