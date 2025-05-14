@@ -11,6 +11,9 @@ on:
       - 'release/v*'
       - 'development'
 
+permissions:
+  contents: read
+
 jobs:
   assign-assignees:
     permissions:
