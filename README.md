@@ -10,5 +10,7 @@
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/dafneb/netbox-plugin-azure/codeql.yml?label=CodeQL)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/dafneb/netbox-plugin-azure/badge)](https://scorecard.dev/viewer/?uri=github.com/dafneb/netbox-plugin-azure)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10545/badge)](https://www.bestpractices.dev/projects/10545)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/dafneb/netbox-plugin-azure/main.svg)](https://results.pre-commit.ci/latest/github/dafneb/netbox-plugin-azure/main)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Netbox plugin - Azure inventory
