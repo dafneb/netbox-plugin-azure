@@ -24,6 +24,7 @@ dependencies = [
     "django_urls",
     "django-views",
     "djangorestframework",
+    "pre-commit",
 ]
 
 classifiers=[

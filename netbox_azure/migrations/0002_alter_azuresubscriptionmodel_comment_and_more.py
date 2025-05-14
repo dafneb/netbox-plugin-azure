@@ -7,27 +7,31 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('netbox_azure', '0001_initial'),
+        ("netbox_azure", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='azuresubscriptionmodel',
-            name='comment',
+            model_name="azuresubscriptionmodel",
+            name="comment",
             field=models.TextField(blank=True),
         ),
         migrations.AlterField(
-            model_name='azuresubscriptionmodel',
-            name='tenant',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='subscriptions', to='netbox_azure.azuretenantmodel'),
+            model_name="azuresubscriptionmodel",
+            name="tenant",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="subscriptions",
+                to="netbox_azure.azuretenantmodel",
+            ),
         ),
         migrations.AlterField(
-            model_name='azuretenantmodel',
-            name='comment',
+            model_name="azuretenantmodel",
+            name="comment",
             field=models.TextField(blank=True),
         ),
         migrations.AlterUniqueTogether(
-            name='azuresubscriptionmodel',
-            unique_together={('tenant', 'subid')},
+            name="azuresubscriptionmodel",
+            unique_together={("tenant", "subid")},
         ),
     ]

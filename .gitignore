@@ -179,7 +179,7 @@ cython_debug/
 # Visual Studio Code - Server - Remote Development
 .remote/
 
-# My notes 
+# My notes
 notes.txt
 
 # Snyk Security
