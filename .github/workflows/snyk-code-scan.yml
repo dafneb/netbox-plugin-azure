@@ -31,5 +31,5 @@ jobs:
       actions: read
       contents: read
       security-events: write
-    uses: dafneb/.github/.github/workflows/snyk-code-scan-python.yml@6aa9f85c3c1bb183d38008de4b3408b85cbc79c4
+    uses: dafneb/.github/.github/workflows/snyk-code-scan-python.yml@2447bb5e1b5f31b2c534e3590cdc543a93576db2
     secrets: inherit
