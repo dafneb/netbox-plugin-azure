@@ -1,4 +1,4 @@
-Django~=5.2.1
+Django~=5.2.2
 django_db~=0.0.7
 django-filter~=25.1
 django-shortcuts~=1.6
